@@ -1,0 +1,15 @@
+<ul class="list-group">
+  <li class="list-group-item">
+    <a [routerLink]="[index]" routerLinkActive="active">
+      <div class="row">
+        <div class="col-8">
+          <h5>{{ recipeItem.name }}</h5>
+          <p>{{ recipeItem.description }}</p>
+        </div>
+        <div class="col-4">
+          <img src="{{ recipeItem.imagePath }}" alt="{{ recipeItem.name }}" width="100%">
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>

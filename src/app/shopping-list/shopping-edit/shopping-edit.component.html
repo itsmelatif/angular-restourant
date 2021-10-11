@@ -1,0 +1,32 @@
+<div class="row mb-5">
+  <div class="col-5">
+    <form (ngSubmit)="onAddShopping(f)" #f="ngForm">
+      <div class="row">
+        <div class="col-8">
+          <label for="">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            ngModel>
+        </div>
+        <div class="col-4">
+          <label for="">QTY</label>
+          <input
+            type="number"
+            id="qty"
+            class="form-control"
+            name="qty"
+            ngModel
+          >
+        </div>
+        <div class="col-12 pt-4">
+          <button type="submit" class="btn btn-success">{{ editStatus ? 'Edit' : 'Add' }}</button>&nbsp;&nbsp;&nbsp;
+          <button class="btn btn-secondary" (click)="onClearForm()">Clear</button> &nbsp;&nbsp;&nbsp;
+          <button class="btn btn-danger" (click)="onDeleteItem()" *ngIf="editStatus">Delete</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
